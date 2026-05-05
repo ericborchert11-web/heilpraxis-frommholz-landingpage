@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Heilpraxis Frommholz – unsere Website ist in Arbeit." />
+  <meta name="robots" content="noindex" />
+  <title>Heilpraxis Frommholz – Website in Arbeit</title>
+  <style>
+    :root {
+      --akzent: #f5c518;
+      --akzent-dunkel: #c79a00;
+      --text: #2a2a2a;
+      --text-leise: #666;
+      --hintergrund: #faf8f3;
+      --linie: #e6e1d4;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body { height: 100%; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      background: var(--hintergrund);
+      color: var(--text);
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1.5rem;
+    }
+
+    .karte {
+      max-width: 560px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .wappen {
+      width: 180px;
+      height: auto;
+      margin: 0 auto 2rem;
+      display: block;
+    }
+
+    h1 {
+      font-size: clamp(1.75rem, 4vw, 2.25rem);
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      margin-bottom: 0.75rem;
+    }
+
+    .untertitel {
+      font-size: 1.1rem;
+      color: var(--text-leise);
+      margin-bottom: 2.5rem;
+    }
+
+    .trenner {
+      width: 60px;
+      height: 3px;
+      background: var(--akzent);
+      margin: 0 auto 2.5rem;
+      border-radius: 2px;
+    }
+
+    .hinweis {
+      font-size: 1rem;
+      color: var(--text);
+      margin-bottom: 2.5rem;
+    }
+
+    .kontakt {
+      background: white;
+      border: 1px solid var(--linie);
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      text-align: left;
+    }
+
+    .kontakt h2 {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-leise);
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+
+    .kontakt-zeile {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid var(--linie);
+    }
+
+    .kontakt-zeile:last-child { border-bottom: none; }
+
+    .kontakt-label {
+      color: var(--text-leise);
+      font-size: 0.95rem;
+    }
+
+    .kontakt-wert {
+      font-weight: 500;
+    }
+
+    .kontakt-wert a {
+      color: var(--text);
+      text-decoration: none;
+      border-bottom: 1px solid var(--akzent);
+    }
+
+    .kontakt-wert a:hover {
+      color: var(--akzent-dunkel);
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.85rem;
+      color: var(--text-leise);
+      border-top: 1px solid var(--linie);
+    }
+
+    footer a {
+      color: var(--text-leise);
+      text-decoration: none;
+      margin: 0 0.5rem;
+    }
+
+    footer a:hover { color: var(--text); }
+
+    /* Impressum-Modal */
+    .modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.4);
+      z-index: 100;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+    }
+
+    .modal.offen { display: flex; }
+
+    .modal-inhalt {
+      background: white;
+      max-width: 500px;
+      width: 100%;
+      padding: 2rem;
+      border-radius: 8px;
+      max-height: 85vh;
+      overflow-y: auto;
+      text-align: left;
+    }
+
+    .modal-inhalt h2 {
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+    }
+
+    .modal-inhalt p {
+      margin-bottom: 0.75rem;
+      font-size: 0.95rem;
+    }
+
+    .modal-schliessen {
+      background: var(--akzent);
+      color: var(--text);
+      border: none;
+      padding: 0.6rem 1.2rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 600;
+      margin-top: 1rem;
+    }
+
+    .modal-schliessen:hover { background: var(--akzent-dunkel); }
+  </style>
+</head>
+<body>
+
+  <main>
+    <div class="karte">
+      <img src="wappen.png" alt="Wappen der Heilpraxis Frommholz" class="wappen" />
+
+      <h1>Heilpraxis Frommholz</h1>
+      <p class="untertitel">Hier entsteht unsere neue Website.</p>
+
+      <div class="trenner"></div>
+
+      <p class="hinweis">
+        Wir arbeiten derzeit an unserem Online-Auftritt.<br />
+        Bei Fragen erreichen Sie uns bereits unter:
+      </p>
+
+      <div class="kontakt">
+        <h2>Kontakt</h2>
+        <div class="kontakt-zeile">
+          <span class="kontakt-label">E-Mail</span>
+          <span class="kontakt-wert"><a href="mailto:kontakt@heilpraxis-frommholz.de">kontakt@heilpraxis-frommholz.de</a></span>
+        </div>
+        <div class="kontakt-zeile">
+          <span class="kontakt-label">Telefon</span>
+          <span class="kontakt-wert">auf Anfrage</span>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <a href="#" onclick="document.getElementById('impressum').classList.add('offen'); return false;">Impressum</a>
+    &middot;
+    <a href="#" onclick="document.getElementById('datenschutz').classList.add('offen'); return false;">Datenschutz</a>
+  </footer>
+
+  <!-- Impressum -->
+  <div id="impressum" class="modal" onclick="if(event.target===this)this.classList.remove('offen')">
+    <div class="modal-inhalt">
+      <h2>Impressum</h2>
+      <p><strong>Heilpraxis Frommholz</strong><br />
+      Inhaber: Simeon Frommholz<br />
+      Stephanstraße 46<br />
+      10559 Berlin</p>
+      <p><strong>Kontakt:</strong><br />
+      E-Mail: kontakt@heilpraxis-frommholz.de</p>
+      <p><strong>Berufsbezeichnung und berufsrechtliche Regelungen:</strong><br />
+      Heilpraktiker (Erlaubnis nach § 1 Heilpraktikergesetz, erteilt in Deutschland)<br />
+      Zuständige Aufsichtsbehörde: Gesundheitsamt Berlin-Mitte, Reinickendorfer Straße 60a, 13347 Berlin</p>
+      <p><strong>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV:</strong><br />
+      Simeon Frommholz, Stephanstraße 46, 10559 Berlin</p>
+      <p style="font-size: 0.85rem; color: var(--text-leise); margin-top: 1.5rem;">
+        Diese Angaben werden mit Inbetriebnahme der vollständigen Website ergänzt.
+      </p>
+      <button class="modal-schliessen" onclick="document.getElementById('impressum').classList.remove('offen')">Schließen</button>
+    </div>
+  </div>
+
+  <!-- Datenschutz -->
+  <div id="datenschutz" class="modal" onclick="if(event.target===this)this.classList.remove('offen')">
+    <div class="modal-inhalt">
+      <h2>Datenschutz</h2>
+      <p>Diese Seite ist eine reine Informationsseite („Coming-Soon"-Seite). Es werden keine personenbezogenen Daten erhoben, keine Cookies gesetzt und keine Tracking- oder Analysedienste eingesetzt.</p>
+      <p>Wenn Sie uns per E-Mail kontaktieren, werden Ihre Angaben (E-Mail-Adresse, Name, Inhalt der Anfrage) ausschließlich zur Bearbeitung Ihrer Anfrage verwendet und nicht an Dritte weitergegeben.</p>
+      <p><strong>Verantwortliche Stelle:</strong><br />
+      Simeon Frommholz, Heilpraxis Frommholz<br />
+      kontakt@heilpraxis-frommholz.de</p>
+      <p style="font-size: 0.85rem; color: var(--text-leise); margin-top: 1.5rem;">
+        Eine vollständige Datenschutzerklärung folgt mit der finalen Website.
+      </p>
+      <button class="modal-schliessen" onclick="document.getElementById('datenschutz').classList.remove('offen')">Schließen</button>
+    </div>
+  </div>
+
+</body>
+</html>
